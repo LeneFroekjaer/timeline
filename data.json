@@ -1,0 +1,98 @@
+[
+  {
+    "id": "event1805",
+    "title": "Født i Odense",
+    "year": 1805,
+    "description": "Hans Christian Andersen blev født d. 2. April 1805 i Odense på Fyn.",
+    "link1": "",
+    "link2": ""
+  },
+  {
+    "id": "event1819",
+    "title": "Rejste til København",
+    "year": 1819,
+    "description": "Da han blot var 14 år gammel rejste han til københavn. Turen varede mere end en dag.",
+    "link1": "",
+    "link2": ""
+  },
+  {
+    "id": "event1827",
+    "title": "“Det døende barn“",
+    "year": 1827,
+    "description": "D. 25. september fik han udgivet digtet “Det Døende Barn“ i Kjøbenhavnsposten. Derefter startede hans egentlige æra som forfatter. Du kan læse digtet “Det døende barn” ved at benytte linket nedenunder.",
+    "link1": "https://kalliope.org/da/text/andersenandrea1",
+    "link2": ""
+  },
+  {
+    "id": "event1828",
+    "title": "Studentereksamen",
+    "year": 1828,
+    "description": "Efter Examen Artium (1828) udgav H.C. Andersen sine første værker under eget navn, og efter den afsluttende Anden Examen (1829) besluttede den unge cand. phil. at hengive sig til digtergerningen på fuld tid",
+    "link1": "",
+    "link2": ""
+  },
+  {
+    "id": "event1831",
+    "title": "Hans første digtsamling",
+    "year": 1831,
+    "description": "I 1831 udkom hans første egentlige digtsamling, og han var på sin første udlandsrejse, der gik til Tyskland, hvor han mødte digteren Chamisso.",
+    "link1": "",
+    "link2": ""
+  },
+  {
+    "id": "event1835",
+    "title": "“Fyrtøjet” og “Prinsessen på ærten”",
+    "year": 1835,
+    "description": "Han skrev eventyrerne “Fyrtøjet” og “Prinsessen på ærten”. Du kan læse dem ved at følge de nedenstående links.",
+    "link1": "https://www.andersenstories.com/da/andersen_fortaellinger/fyrtojet",
+    "link2": "https://www.andersenstories.com/da/andersen_fortaellinger/prinsessen_pa_aerten"
+  },
+  {
+    "id": "event1837",
+    "title": "“Den Lille Havfrue” og “Kejserens Nye Klæder”",
+    "year": 1837,
+    "description": "Han skrev eventyrerne “Den lille havfrue” og “kejserens nye klæder”. Du kan læse dem ved at følge de nedenstående links.",
+    "link1": "https://www.andersenstories.com/da/andersen_fortaellinger/den_lille_havfrue",
+    "link2": "https://www.andersenstories.com/da/andersen_fortaellinger/kejserens_nye_klaeder"
+  },
+  {
+    "id": "event1843",
+    "title": "“Den Grimme Ælling”",
+    "year": 1843,
+    "description": "Han skrev det meget kendte eventyr “Den grimme ælling”. Du kan læse historien ved at benytte linket nedenunder.",
+    "link1": "https://www.andersenstories.com/da/andersen_fortaellinger/den_grimme_aelling",
+    "link2": ""
+  },
+  {
+    "id": "event1844",
+    "title": "“Snedronningen”",
+    "year": 1844,
+    "description": "Han skrev “Snedronningen”. Du kan læse historien ved at benytte linket nedenunder.",
+    "link1": "https://www.andersenstories.com/da/andersen_fortaellinger/snedronningen",
+    "link2": ""
+  },
+  {
+    "id": "event1848",
+    "title": "“Den Lille Pige Med Svovlstikkerne”",
+    "year": 1848,
+    "description": "Han skrev “Den lille pige med svovlstikkerne”. Du kan læse historien ved at benytte linket nedenunder.",
+    "link1": "https://www.andersenstories.com/da/andersen_fortaellinger/den_lille_pige_med_svovlstikkerne",
+    "link2": ""
+  },
+  {
+    "id": "event1867",
+    "title": "Æresborger",
+    "year": 1867,
+    "description": "Han blev valgt til æresborger i Odense, hvor han hertil blev fejret.",
+    "link1": "",
+    "link2": ""
+  },
+  {
+    "id": "event1875",
+    "title": "Død",
+    "year": 1875,
+    "description": "Hans Christian Andersen døde d. 4. August 1875 på Rolighed i København. Han ligger begravet på Assistenten Kirkegård.",
+    "link1": "",
+    "link2": ""
+  }
+]
