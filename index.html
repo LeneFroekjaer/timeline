@@ -12,12 +12,45 @@
     />
   </head>
   <body>
-    <h1>H. C. Andersen eget eventyr</h1>
+    <h1>H. C. Andersens eget eventyr</h1>
 
+    <!-- SVG -->
     <section>
       <div id="svg_timeline"></div>
     </section>
 
+    <!-- INFO-BOKSEN -->
+    <article></article>
+    <template id="event_template">
+      <h2 data-field="title">Title</h2>
+      <p data-field="year">Year</p>
+      <p data-field="description">Description</p>
+      <a href="" data-field="link1"></a>
+      <a href="" data-field="link2"></a>
+      <div id="closebutton">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+      </div>
+    </template>
+
+    <footer>
+      <p>Kildehenvisninger:</p>
+      <a href="https://da.wikipedia.org/wiki/H.C._Andersen"
+        >https://da.wikipedia.org/wiki/H.C._Andersen</a
+      >
+      <a href="https://www.andersenstories.com/da/andersen_fortaellinger/list"
+        >https://www.andersenstories.com/da/andersen_fortaellinger/list</a
+      >
+      <a href="https://museum.odense.dk/viden/hc-andersen/om-hca"
+        >https://museum.odense.dk/viden/hc-andersen/om-hca</a
+      >
+      <a href="http://www.visithcandersen.dk/aeresborger1.htm"
+        >http://www.visithcandersen.dk/aeresborger1.htm</a
+      >
+      <a href="https://kalliope.org/da/text/andersenandrea1"
+        >https://kalliope.org/da/text/andersenandrea1</a
+      >
+    </footer>
     <script src="timeline.js"></script>
   </body>
 </html>
