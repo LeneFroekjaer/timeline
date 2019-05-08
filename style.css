@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   overscroll-behavior: none;
   font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }
 h1 {
   text-align: center;
@@ -205,10 +206,21 @@ article {
   padding: 15px 0;
 }
 article p,
-article h2 {
-  padding: 0 25px;
+article h2,
+article a {
+  padding: 0 50px;
   width: 80vw;
 }
+[data-field="year"] {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+article a {
+  text-decoration: none;
+  color: #3aabd8;
+  display: block;
+}
+
 #closebutton {
   position: absolute;
   top: 20px;
@@ -251,10 +263,17 @@ footer a {
   padding: 0 15px;
   color: #fff;
   margin: 0;
-  font-size: 0.5em;
+}
+footer p {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+footer a {
+  font-size: 0.7em;
   font-weight: 300;
   text-decoration: none;
 }
+
 a:hover {
   color: #fc6;
 }

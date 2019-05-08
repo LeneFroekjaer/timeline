@@ -10,6 +10,8 @@ let Events = {
   description: "-event-description-",
   link1: "-event-link1-",
   link2: "-event-link2-",
+  linkname1: "-name-of-link1-",
+  linkname2: "-name-of-link2-",
   fromJSON(jsonObject) {
     this.id = jsonObject.id;
     this.title = jsonObject.title;
@@ -17,6 +19,8 @@ let Events = {
     this.description = jsonObject.description;
     this.link1 = jsonObject.link1;
     this.link2 = jsonObject.link2;
+    this.linkname1 = jsonObject.linkname1;
+    this.linkname2 = jsonObject.linkname2;
   }
 };
 let allEvents = []; // Global: containing the json-data.
@@ -118,9 +122,9 @@ function placeInfo(object) {
   clone.querySelector("[data-field='description']").textContent =
     object.description;
   // preparing the links in infoboks
-  clone.querySelector("[data-field='link1']").textContent = object.link1;
+  clone.querySelector("[data-field='link1']").textContent = object.linkname1;
   clone.querySelector("[data-field='link1']").href = object.link1;
-  clone.querySelector("[data-field='link2']").textContent = object.link2;
+  clone.querySelector("[data-field='link2']").textContent = object.linkname2;
   clone.querySelector("[data-field='link2']").href = object.link2;
 
   const dest = document.querySelector("article");
