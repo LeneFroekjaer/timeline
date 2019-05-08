@@ -1,0 +1,162 @@
+/* SVG */
+svg {
+  height: 500px;
+}
+
+.cls-1,
+.cls-11,
+.cls-16,
+.cls-3 {
+  fill: none;
+}
+
+.cls-1,
+.cls-11,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-17,
+.cls-18,
+.cls-19,
+.cls-2,
+.cls-20,
+.cls-21,
+.cls-26,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-9 {
+  stroke: #000;
+}
+
+.cls-1,
+.cls-11,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-16,
+.cls-17,
+.cls-18,
+.cls-19,
+.cls-2,
+.cls-20,
+.cls-21,
+.cls-26,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-9 {
+  stroke-miterlimit: 10;
+}
+
+.cls-1 {
+  stroke-width: 2px;
+}
+
+.cls-18,
+.cls-2,
+.cls-25 {
+  fill: #fff;
+}
+
+.cls-4 {
+  fill: #afafaf;
+}
+
+.cls-11,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-17,
+.cls-18,
+.cls-19,
+.cls-20,
+.cls-21,
+.cls-26,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-9 {
+  stroke-width: 0.25px;
+}
+
+.cls-10,
+.cls-5 {
+  fill: #fc6;
+}
+
+.cls-6 {
+  fill: #4ddba7;
+}
+
+.cls-8 {
+  font-size: 60px;
+  font-family: OpenSans, Open Sans;
+  stroke-width: 1px;
+  stroke: #494949;
+}
+
+.cls-24,
+.cls-9 {
+  fill: #3aabd8;
+}
+
+.cls-12,
+.cls-17 {
+  fill: #6cf;
+}
+
+.cls-13,
+.cls-28 {
+  fill: #f96;
+}
+
+.cls-14,
+.cls-30 {
+  fill: #eabd98;
+}
+
+.cls-15,
+.cls-22 {
+  fill: #e87d4d;
+}
+
+.cls-16 {
+  stroke: #6cf;
+  stroke-width: 4px;
+}
+
+.cls-19,
+.cls-27 {
+  fill: #494949;
+}
+
+.cls-20 {
+  fill: #6fc;
+}
+
+.cls-21,
+.cls-23 {
+  fill: #ffdbbb;
+}
+
+.cls-26 {
+  fill: #e2a842;
+}
+
+.cls-29 {
+  fill: #40d3cf;
+}
+
+.cls-31 {
+  fill: #4d4d4d;
+}
+
+/* HORISONTAL SCROLLING*/
+section {
+  overflow: auto;
+}
