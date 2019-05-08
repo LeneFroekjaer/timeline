@@ -10,6 +10,10 @@ svg {
   fill: none;
 }
 
+.cls-7 {
+  fill: #494949;
+}
+
 .cls-1,
 .cls-11,
 .cls-13,
@@ -28,7 +32,7 @@ svg {
 .cls-6,
 .cls-7,
 .cls-9 {
-  stroke: #000;
+  stroke: #494949;
 }
 
 .cls-1,
@@ -98,6 +102,7 @@ svg {
   font-family: OpenSans, Open Sans;
   stroke-width: 1px;
   stroke: #494949;
+  fill: #494949;
 }
 
 .cls-24,
@@ -153,10 +158,25 @@ svg {
 }
 
 .cls-31 {
-  fill: #4d4d4d;
+  fill: #494949;
 }
 
 /* HORISONTAL SCROLLING*/
 section {
   overflow: auto;
+}
+
+/* SWING WHEN HOVERING */
+.image_frame:hover {
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: 50% 0;
+  transform-box: fill-box;
+}
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
