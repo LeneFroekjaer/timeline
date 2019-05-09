@@ -68,34 +68,26 @@ function chooseEvent() {
 }
 
 function interactivEvent(event) {
-  event.addEventListener("mouseover", () => {
-    hoverEvent(event); // GO TO "HOVER OVER SVG"
-  });
   event.addEventListener("click", () => {
+    // removes the colors from the before selected event.
+    document.querySelectorAll(".nail").forEach(e => {
+      e.classList.remove("choosen");
+    });
+    document.querySelectorAll(".year").forEach(e => {
+      e.classList.remove("choosen");
+    });
+
     // making sure that there is only one data-object displaying.
     document.querySelector("article").innerHTML = "";
     clickEvent(event); // go to CLICK AN EVENT
   });
 }
-
-//// ---- HOVER OVER AN EVENT
-
-function hoverEvent(event) {
-  event.querySelector(".nail").style.fill = "#E87D4D";
-  event.querySelector("text").style.fill = "#E87D4D";
-  event.addEventListener("mouseout", () => {
-    nohoverEvent(event);
-  });
-}
-
-function nohoverEvent(event) {
-  event.querySelector(".nail").style.fill = "#494949";
-  event.querySelector("text").style.fill = "#494949";
-}
-
 //// ---- CLICK AN EVENT
 
 function clickEvent(event) {
+  event.querySelector(".nail").classList.add("choosen");
+  event.querySelector(".year").classList.add("choosen");
+  //event.querySelector("text").style.fill = "red";
   allEvents.forEach(object => {
     //only the object with the same event.id (the event that has been clicked).
     if (object.id === event.id) {
@@ -121,6 +113,7 @@ function placeInfo(object) {
   clone.querySelector("[data-field='year']").textContent = object.year;
   clone.querySelector("[data-field='description']").textContent =
     object.description;
+
   // preparing the links in infoboks
   clone.querySelector("[data-field='link1']").textContent = object.linkname1;
   clone.querySelector("[data-field='link1']").href = object.link1;
@@ -135,6 +128,14 @@ function placeInfo(object) {
 }
 
 function closeInfo() {
+  // removes the colors from the before selected event.
+  document.querySelectorAll(".nail").forEach(e => {
+    e.classList.remove("choosen");
+  });
+  document.querySelectorAll(".year").forEach(e => {
+    e.classList.remove("choosen");
+  });
+
   document.querySelector("h1").style.display = "block";
   document.querySelector("article").style.display = "none";
   document.querySelector("footer").style.display = "block";

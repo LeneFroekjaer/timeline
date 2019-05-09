@@ -11,6 +11,7 @@ h1 {
   text-align: center;
   font-family: "Tangerine", cursive;
   font-size: 3em;
+  color: #494949;
 }
 
 /* SVG */
@@ -114,7 +115,7 @@ svg {
 
 .cls-8 {
   font-size: 60px;
-  font-family: OpenSans, Open Sans;
+  font-family: "Open Sans", sans-serif;
   stroke-width: 1px;
   stroke: #494949;
   fill: #494949;
@@ -276,4 +277,16 @@ footer a {
 
 a:hover {
   color: #fc6;
+}
+
+.event:hover .year,
+.event:hover .nail {
+  fill: #e2a842;
+}
+
+.choosen {
+  fill: #e87d4d;
+}
+.event:hover .choosen {
+  fill: #e87d4d;
 }
