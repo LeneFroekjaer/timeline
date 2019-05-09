@@ -2,27 +2,6 @@
 window.addEventListener("DOMContentLoaded", loadSVG); // go to GETTING SVG
 window.addEventListener("DOMContentLoaded", loadJSON); // go to GETTING JSON
 
-// objects for json-data
-let Events = {
-  id: "-event-id-",
-  title: "-event-title-",
-  year: "-event-year-",
-  description: "-event-description-",
-  link1: "-event-link1-",
-  link2: "-event-link2-",
-  linkname1: "-name-of-link1-",
-  linkname2: "-name-of-link2-",
-  fromJSON(jsonObject) {
-    this.id = jsonObject.id;
-    this.title = jsonObject.title;
-    this.year = jsonObject.year;
-    this.description = jsonObject.description;
-    this.link1 = jsonObject.link1;
-    this.link2 = jsonObject.link2;
-    this.linkname1 = jsonObject.linkname1;
-    this.linkname2 = jsonObject.linkname2;
-  }
-};
 let allEvents = []; // Global: containing the json-data.
 
 //// ---- GETTING JSON
@@ -37,12 +16,8 @@ function loadJSON() {
 // preparing objects.
 function prepareObjects(jsonData) {
   jsonData.forEach(jsonObject => {
-    //Making an new object.
-    let hcaevent = Object.create(Events);
-    hcaevent.fromJSON(jsonObject);
-
     // saving the data in a global array.
-    allEvents.push(hcaevent);
+    allEvents.push(jsonObject);
   });
 }
 

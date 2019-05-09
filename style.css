@@ -4,14 +4,31 @@ body {
   background-color: #6cf;
   box-sizing: border-box;
   overscroll-behavior: none;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  color: #494949;
 }
+/*Fonts*/
 h1 {
   text-align: center;
   font-family: "Tangerine", cursive;
+  font-weight: 700;
   font-size: 3em;
-  color: #494949;
+}
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+p,
+a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
 }
 
 /* SVG */
@@ -208,14 +225,12 @@ article {
 }
 article p,
 article h2,
+article h3,
 article a {
   padding: 0 50px;
   width: 80vw;
 }
-[data-field="year"] {
-  font-weight: 600;
-  font-size: 1.2em;
-}
+
 article a {
   text-decoration: none;
   color: #3aabd8;
