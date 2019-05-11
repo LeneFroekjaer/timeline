@@ -13,12 +13,12 @@ function init() {
 function loadJSON() {
   fetch("data.json").then(response =>
     response.json().then(jsondata => {
-      sendToGlobalArray(jsondata);
+      sendToGlobal(jsondata);
     })
   );
 }
 // preparing objects
-function sendToGlobalArray(jsonData) {
+function sendToGlobal(jsonData) {
   jsonData.forEach(jsonObject => {
     // saving the data in a global array.
     allTimepoints.push(jsonObject);
@@ -36,18 +36,18 @@ function loadSVG() {
         .querySelector("#svg_timeline")
         .insertAdjacentHTML("afterbegin", svgdata);
 
-      getTimepoints(); // Go to INTERACTING WITH SVG
+      getEvents(); // Go to INTERACTING WITH SVG
     });
 }
 
 //// ---- INTERACTING WITH SVG
 
-function getTimepoints() {
+function getEvents() {
   const events = document.querySelectorAll(".event");
-  events.forEach(interactivTimepoint);
+  events.forEach(interactivEvent);
 }
 
-function interactivTimepoint(event) {
+function interactivEvent(event) {
   event.addEventListener("click", () => {
     // removes the colors from the before selected event.
     document.querySelectorAll(".nail").forEach(e => {
