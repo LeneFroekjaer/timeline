@@ -1,9 +1,13 @@
 "use strict";
-window.addEventListener("DOMContentLoaded", loadSVG); // go to GETTING SVG
-window.addEventListener("DOMContentLoaded", loadJSON); // go to GETTING JSON
+window.addEventListener("DOMContentLoaded", init);
 
 // Global array: containing the json-data.
 let allTimepoints = [];
+
+function init() {
+  loadJSON(); // go to GETTING JSON
+  loadSVG(); // go to GETTING SVG
+}
 
 //// ---- GETTING JSON
 function loadJSON() {
@@ -27,6 +31,7 @@ function loadSVG() {
   fetch("timeline.svg")
     .then(response => response.text())
     .then(svgdata => {
+      // displaying the svg
       document
         .querySelector("#svg_timeline")
         .insertAdjacentHTML("afterbegin", svgdata);
@@ -38,8 +43,8 @@ function loadSVG() {
 //// ---- INTERACTING WITH SVG
 
 function getTimepoints() {
-  const timepoints = document.querySelectorAll(".event");
-  timepoints.forEach(interactivTimepoint);
+  const events = document.querySelectorAll(".event");
+  events.forEach(interactivTimepoint);
 }
 
 function interactivTimepoint(event) {
@@ -52,7 +57,7 @@ function interactivTimepoint(event) {
       e.classList.remove("choosen");
     });
 
-    // making sure that there is only one data-object displaying.
+    // making sure that there is only one timepoint-data displaying.
     document.querySelector("article").innerHTML = "";
 
     clickEvent(event); // go to CLICK AN EVENT
@@ -64,15 +69,17 @@ function clickEvent(event) {
   event.querySelector(".nail").classList.add("choosen");
   event.querySelector(".year").classList.add("choosen");
 
-  allTimepoints.forEach(object => {
-    //only the object with the same event.id (the event that has been clicked).
-    if (object.id === event.id) {
-      placeInfo(object);
+  allTimepoints.forEach(timepoint => {
+    //only the timepoint with the same event.id (the event that has been clicked).
+    if (timepoint.id === event.id) {
+      showInfo(timepoint);
     }
   });
 }
 
-function placeInfo(object) {
+//// ---- SHOW INFO-BOX
+
+function showInfo(timepoint) {
   // show info-boks
   document.querySelector("article").style.visibility = "visible";
   document.querySelector("article").style.opacity = "1";
@@ -81,16 +88,16 @@ function placeInfo(object) {
     .querySelector("#event_template")
     .content.cloneNode(true);
 
-  clone.querySelector("[data-field='title']").textContent = object.title;
-  clone.querySelector("[data-field='year']").textContent = object.year;
+  clone.querySelector("[data-field='title']").textContent = timepoint.title;
+  clone.querySelector("[data-field='year']").textContent = timepoint.year;
   clone.querySelector("[data-field='description']").textContent =
-    object.description;
+    timepoint.description;
 
-  // preparing the links in infoboks
-  clone.querySelector("[data-field='link1']").textContent = object.linkname1;
-  clone.querySelector("[data-field='link1']").href = object.link1;
-  clone.querySelector("[data-field='link2']").textContent = object.linkname2;
-  clone.querySelector("[data-field='link2']").href = object.link2;
+  // links in info-box
+  clone.querySelector("[data-field='link1']").textContent = timepoint.linkname1;
+  clone.querySelector("[data-field='link1']").href = timepoint.link1;
+  clone.querySelector("[data-field='link2']").textContent = timepoint.linkname2;
+  clone.querySelector("[data-field='link2']").href = timepoint.link2;
 
   const dest = document.querySelector("article");
 
