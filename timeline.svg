@@ -1,6 +1,6 @@
 <svg id="timeline" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 6500 880">
   <title>timeline</title>
-  <line class="cls-1" x1="315" y1="258" x2="6180" y2="258"/>
+  <!-- <line class="cls-1" x1="315" y1="258" x2="6180" y2="258"/> -->
   <!-- 1875 - Død -->
   <g id="event1875" class="event">
     <g class="image_frame">

@@ -2,22 +2,22 @@
 window.addEventListener("DOMContentLoaded", loadSVG); // go to GETTING SVG
 window.addEventListener("DOMContentLoaded", loadJSON); // go to GETTING JSON
 
-let allEvents = []; // Global: containing the json-data.
+// Global array: containing the json-data.
+let allTimepoints = [];
 
 //// ---- GETTING JSON
 function loadJSON() {
   fetch("data.json").then(response =>
     response.json().then(jsondata => {
-      prepareObjects(jsondata);
+      sendToGlobalArray(jsondata);
     })
   );
 }
-
-// preparing objects.
-function prepareObjects(jsonData) {
+// preparing objects
+function sendToGlobalArray(jsonData) {
   jsonData.forEach(jsonObject => {
     // saving the data in a global array.
-    allEvents.push(jsonObject);
+    allTimepoints.push(jsonObject);
   });
 }
 
@@ -31,18 +31,18 @@ function loadSVG() {
         .querySelector("#svg_timeline")
         .insertAdjacentHTML("afterbegin", svgdata);
 
-      chooseEvent(); // Go to INTERACTING WITH SVG
+      getTimepoints(); // Go to INTERACTING WITH SVG
     });
 }
 
 //// ---- INTERACTING WITH SVG
 
-function chooseEvent() {
-  const events = document.querySelectorAll(".event");
-  events.forEach(interactivEvent);
+function getTimepoints() {
+  const timepoints = document.querySelectorAll(".event");
+  timepoints.forEach(interactivTimepoint);
 }
 
-function interactivEvent(event) {
+function interactivTimepoint(event) {
   event.addEventListener("click", () => {
     // removes the colors from the before selected event.
     document.querySelectorAll(".nail").forEach(e => {
@@ -54,6 +54,7 @@ function interactivEvent(event) {
 
     // making sure that there is only one data-object displaying.
     document.querySelector("article").innerHTML = "";
+
     clickEvent(event); // go to CLICK AN EVENT
   });
 }
@@ -62,8 +63,8 @@ function interactivEvent(event) {
 function clickEvent(event) {
   event.querySelector(".nail").classList.add("choosen");
   event.querySelector(".year").classList.add("choosen");
-  //event.querySelector("text").style.fill = "red";
-  allEvents.forEach(object => {
+
+  allTimepoints.forEach(object => {
     //only the object with the same event.id (the event that has been clicked).
     if (object.id === event.id) {
       placeInfo(object);
@@ -72,13 +73,9 @@ function clickEvent(event) {
 }
 
 function placeInfo(object) {
-  // removes footer and title.
-  document.querySelector("footer").style.display = "none";
-  document.querySelector("h1").style.display = "none";
-  // showing the infoboks.
-  document.querySelector("article").style.display = "block";
-  // adjust the svg.
-  document.querySelector("svg").style.height = "60vh";
+  // show info-boks
+  document.querySelector("article").style.visibility = "visible";
+  document.querySelector("article").style.opacity = "1";
 
   const clone = document
     .querySelector("#event_template")
@@ -111,8 +108,6 @@ function closeInfo() {
     e.classList.remove("choosen");
   });
 
-  document.querySelector("h1").style.display = "block";
-  document.querySelector("article").style.display = "none";
-  document.querySelector("footer").style.display = "block";
-  document.querySelector("svg").style.height = "500px";
+  document.querySelector("article").style.visibility = "hidden";
+  document.querySelector("article").style.opacity = "0";
 }

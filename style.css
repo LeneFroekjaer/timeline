@@ -1,14 +1,30 @@
 /* OVERALL */
 body {
   margin: 0;
-  background-color: #6cf;
+  background-color: #eabd98;
   box-sizing: border-box;
   overscroll-behavior: none;
   color: #494949;
 }
+
+/* HEADER */
+header {
+  display: flex;
+  text-align: center;
+  width: 564px;
+  height: 100px;
+  margin: 0 auto;
+}
+img {
+  margin: 20px;
+  height: 60px;
+}
+.hca_right {
+  transform: scaleX(-1);
+}
+
 /*Fonts*/
 h1 {
-  text-align: center;
   font-family: "Tangerine", cursive;
   font-weight: 700;
   font-size: 3em;
@@ -33,7 +49,7 @@ a {
 
 /* SVG */
 svg {
-  height: 500px;
+  height: 400px;
 }
 
 .cls-1,
@@ -44,7 +60,7 @@ svg {
 }
 
 .cls-7 {
-  fill: #494949;
+  fill: #afafaf;
 }
 
 .cls-1,
@@ -196,39 +212,73 @@ svg {
 
 /* HORISONTAL SCROLLING*/
 section {
-  overflow: auto;
+  overflow-x: auto;
 }
 
 /* SWING WHEN HOVERING */
 .image_frame:hover {
-  animation: swing ease-in-out 1s infinite alternate;
+  animation: swing ease-in-out 4s 1 normal;
   transform-origin: 50% 0;
   transform-box: fill-box;
 }
 @keyframes swing {
   0% {
-    transform: rotate(3deg);
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(-8deg);
+  }
+  15% {
+    transform: rotate(8deg);
+  }
+  25% {
+    transform: rotate(-6deg);
+  }
+  35% {
+    transform: rotate(6deg);
+  }
+  45% {
+    transform: rotate(-4deg);
+  }
+  55% {
+    transform: rotate(4deg);
+  }
+  65% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  85% {
+    transform: rotate(-1deg);
+  }
+  95% {
+    transform: rotate(1deg);
   }
   100% {
-    transform: rotate(-3deg);
+    transform: rotate(0deg);
   }
 }
 
 /* INFO-BOKS */
 article {
-  position: relative;
-  display: none;
+  z-index: 1;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
   background-color: #fff;
-  min-height: 40vh;
-  width: 100vw;
-  padding: 15px 0;
+  width: 60vw;
+  padding: 25px 0;
+  left: 20vw;
+  bottom: 15px;
+  transition: all 0.5s ease;
+  border: 0.5px solid #494949;
 }
 article p,
 article h2,
 article h3,
 article a {
   padding: 0 50px;
-  width: 80vw;
 }
 
 article a {
@@ -244,6 +294,7 @@ article a {
   width: 50px;
   height: 50px;
   border: none;
+  cursor: pointer;
 }
 
 .bar1 {
@@ -294,14 +345,25 @@ a:hover {
   color: #fc6;
 }
 
+.event:hover {
+  cursor: pointer;
+}
+
 .event:hover .year,
 .event:hover .nail {
   fill: #e2a842;
 }
 
 .choosen {
-  fill: #e87d4d;
+  fill: #6cf;
 }
 .event:hover .choosen {
-  fill: #e87d4d;
+  fill: #6cf;
+}
+
+@media screen and (max-width: 650px) {
+  article {
+    width: auto;
+    left: 0;
+  }
 }
